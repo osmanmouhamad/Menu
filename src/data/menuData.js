@@ -26,7 +26,8 @@ export const menuData = {
         { id: 2, name: "Cold Coffee", emoji: "🧊" },
         { id: 3, name: "Cold Beverages", emoji: "🥤" },
         { id: 4, name: "Salads", emoji: "🥗" },
-        { id: 5, name: "Food Menu", emoji: "🥪" }
+        { id: 5, name: "Food Menu", emoji: "🥪" },
+        { id: 6, name: "Shisha", emoji: "💨" }
     ],
     products: [
         // Hot Drinks
@@ -73,6 +74,12 @@ export const menuData = {
         { id: 33, category_id: 5, name: "Labneh and Vegetables", description: "Fresh labneh with vegetables", emoji: "🥒" },
         { id: 34, category_id: 5, name: "Thym", description: "Traditional thyme manousheh", emoji: "🌿" },
         { id: 35, category_id: 5, name: "Akkawi Cheese Naka", description: "Akkawi cheese specialty", emoji: "🧀" },
-        { id: 36, category_id: 5, name: "Butter and Jam", description: "Butter and jam spread", emoji: "🍯" }
+        { id: 36, category_id: 5, name: "Butter and Jam", description: "Butter and jam spread", emoji: "🍯" },
+
+        // Shisha
+        { id: 37, category_id: 6, name: "Two Apples", description: "Classic double apple flavor", emoji: "🍎" },
+        { id: 38, category_id: 6, name: "Grape & Mint", description: "Sweet grape with fresh mint", emoji: "🍇" },
+        { id: 39, category_id: 6, name: "Lemon & Mint", description: "Zesty lemon with fresh mint", emoji: "🍋" },
+        { id: 40, category_id: 6, name: "Love", emoji: "💗" }
     ]
 };
