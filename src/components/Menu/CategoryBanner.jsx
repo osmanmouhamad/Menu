@@ -28,18 +28,13 @@ export default function CategoryBanner({ category, count }) {
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
 
-            <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4">
-                <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold-soft">
-                        {count} {count === 1 ? 'item' : 'items'}
-                    </p>
-                    <h2 className="font-display text-2xl font-bold text-cream">
-                        {category.name}
-                    </h2>
-                </div>
-                <span className="text-3xl drop-shadow-lg" aria-hidden="true">
-                    {category.emoji}
-                </span>
+            <div className="absolute inset-x-0 bottom-0 p-4">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold-soft">
+                    {count} {count === 1 ? 'item' : 'items'}
+                </p>
+                <h2 className="font-display text-2xl font-bold text-cream">
+                    {category.name}
+                </h2>
             </div>
         </div>
     );
