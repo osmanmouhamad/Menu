@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* تنسيقات عامة مخصصة لضمان تجربة موبايل مثالية */
+html {
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #121212;
+  color: #f3f4f6;
+}
+
+/* إخفاء شريط التمرير للأقسام الأفقية لتبدو أنظف على الهاتف */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* تأثير تدرج أنيق للترويسة */
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(18,18,18,0.95) 0%, rgba(18,18,18,0.8) 100%);
+  backdrop-filter: blur(8px);
+}
+
+/* إلغاء أي قيود تمنع التمرير وضمان حركة سلسة */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #121212;
+  color: #f3f4f6;
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  scroll-behavior: smooth;
+}
+
+/* إخفاء شريط التمرير المزعج للأقسام الأفقية */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
