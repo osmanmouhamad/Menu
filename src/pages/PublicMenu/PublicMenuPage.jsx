@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { menuData } from '../../data/menuData';
 import CategoryFilter from '../../components/Menu/CategoryFilter';
+import CategoryBanner from '../../components/Menu/CategoryBanner';
 import ProductCard from '../../components/Menu/ProductCard';
 import ProductModal from '../../components/Menu/ProductModal';
 
@@ -9,6 +10,7 @@ export default function PublicMenuPage() {
     const { restaurant, categories, products } = menuData;
     const [activeCategory, setActiveCategory] = useState(categories[0]?.id);
     const [selected, setSelected] = useState(null);
+    const [logoFailed, setLogoFailed] = useState(false);
     const clickLock = useRef(false);
 
     // تحديث التاب الفعّال تلقائياً أثناء التمرير
@@ -56,10 +58,25 @@ export default function PublicMenuPage() {
                 >
                     <div className="pointer-events-none absolute -top-24 left-1/2 size-72 -translate-x-1/2 rounded-full bg-gold/15 blur-3xl" />
                     <div className="relative animate-rise">
+                        {/* اللوغو: public/images/logo.webp (وإذا ما لقاه بيعرض الاسم نص) */}
+                        {!logoFailed && (
+                            <img
+                                src="/images/logo.webp"
+                                alt=""
+                                onError={() => setLogoFailed(true)}
+                                className="mx-auto mb-4 block size-28 rounded-3xl object-cover ring-1 ring-gold/30 shadow-[0_10px_40px_-10px_rgba(212,162,76,0.5)]"
+                            />
+                        )}
                         <span className="inline-block rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-gold-soft">
                             Digital Menu
                         </span>
-                        <h1 className="mt-4 font-display text-4xl font-extrabold tracking-wide text-cream">
+                        <h1
+                            className={
+                                logoFailed
+                                    ? 'mt-4 font-display text-4xl font-extrabold tracking-wide text-cream'
+                                    : 'sr-only'
+                            }
+                        >
                             {restaurant.name}
                         </h1>
                         <div className="mx-auto mt-4 flex items-center justify-center gap-3 text-gold/70">
@@ -95,16 +112,9 @@ export default function PublicMenuPage() {
                                 data-id={category.id}
                                 className="scroll-mt-20"
                             >
-                                <div className="mb-4 flex items-center gap-3">
-                                    <span className="text-2xl" aria-hidden="true">{category.emoji}</span>
-                                    <h2 className="font-display text-xl font-bold text-cream">
-                                        {category.name}
-                                    </h2>
-                                    <div className="h-px flex-1 bg-gradient-to-r from-gold/40 to-transparent" />
-                                    <span className="text-xs text-muted">{items.length}</span>
-                                </div>
+                                <CategoryBanner category={category} count={items.length} />
 
-                                <div className="space-y-3">
+                                <div className="mt-4 space-y-3">
                                     {items.map((product, i) => (
                                         <ProductCard
                                             key={product.id}
