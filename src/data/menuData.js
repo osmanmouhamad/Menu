@@ -61,9 +61,9 @@ export const menuData = {
         { id: 24, category_id: 3, name: "Energy Drinks", description: "Energy boost drinks", emoji: "⚡" },
 
         // Salads
-        { id: 25, category_id: 4, name: "Cezar Salad", description: "Classic Caesar salad with chicken", emoji: "🥗" },
+        { id: 25, category_id: 4, name: "Ceasar Salad", description: "Classic Caesar salad with chicken", emoji: "🥗" },
         { id: 26, category_id: 4, name: "Pasta Salad", description: "Pasta salad with special dressing", emoji: "🍝" },
-        { id: 27, category_id: 4, name: "Fetta Salad", description: "Greek feta cheese salad", emoji: "🧀" },
+        { id: 27, category_id: 4, name: "Feta Salad", description: "Greek feta cheese salad", emoji: "🧀" },
 
         // Food Menu
         { id: 28, category_id: 5, name: "Ajo", description: "Special Ajo sandwich", emoji: "🥪" },
