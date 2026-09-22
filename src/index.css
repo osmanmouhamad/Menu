@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
+/* ───────── Design tokens (Tailwind v4) ───────── */
 @theme {
-  --color-bg: #0f0d0b;
-  --color-surface: #1a1613;
-  --color-surface-2: #241e19;
-  --color-line: #2e2721;
+  --color-bg: #0d2b30;
+  --color-surface: #123840;
+  --color-surface-2: #17454e;
+  --color-line: #1f5761;
   --color-gold: #d4a24c;
   --color-gold-soft: #e8c27a;
-  --color-cream: #f5ebdd;
-  --color-muted: #a39586;
+  --color-cream: #f1f7f7;
+  --color-muted: #8fb4b9;
 
   --font-display: "Playfair Display", Georgia, serif;
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -40,7 +41,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: var(--color-bg);
+  background: radial-gradient(120% 60% at 50% 0%, #164852 0%, var(--color-bg) 55%);
   color: var(--color-cream);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
